@@ -92,7 +92,7 @@ Så jeg synger den blues
 Og bliver hængende i min rus"""
 counter = wordCounter.wordCounter()
 counter.wordsToRemove({"og"})
-counted = sorted(counter.wordCount(lyric).items(), key=lambda x: x[1], reverse=True)
+counted = sorted(counter.wordCountDuringProcessing(lyric).items(), key=lambda x: x[1], reverse=True)
 
 for i in counted:
     print(i[0], i[1])

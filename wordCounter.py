@@ -1,6 +1,6 @@
 class wordCounter():
     wordsToRemoveSet = {}
-    def wordCount(self, textToCount = ""):
+    def wordCountDuringProcessing(self, textToCount = ""):
         if textToCount != "":
             counts = dict()
             words = textToCount.split()
