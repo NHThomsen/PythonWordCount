@@ -1,11 +1,12 @@
 class wordCounter():
     wordsToRemoveSet = {}
+    def wordsToRemove(self, removeWords):
+        self.wordsToRemoveSet = removeWords
     def wordCountDuringProcessing(self, textToCount = ""):
         if textToCount != "":
             counts = dict()
-            words = textToCount.split()
         
-            for word in words:
+            for word in textToCount.split():
                 if word not in self.wordsToRemoveSet:
                     if word in counts:
                         counts[word] += 1
@@ -17,9 +18,8 @@ class wordCounter():
     def wordCountPostProcessing(self, textToCount = ""):
         if textToCount != "":
             counts = dict()
-            words = textToCount.split()
 
-            for word in words:
+            for word in textToCount.split():
                 if word in counts:
                     counts[word] += 1
                 else:
@@ -31,5 +31,18 @@ class wordCounter():
             return counts
         else:
             return ""
-    def wordsToRemove(self, removeWords):
-        self.wordsToRemoveSet = removeWords
+    def wordCountPreProcessing(self, textToCount = ""):
+        if textToCount != "":
+            counts = dict()
+
+            for word in self.wordsToRemoveSet:
+                textToCount = textToCount.replace(word,'')
+            for word in textToCount.split():
+                if word in counts:
+                    counts[word] += 1
+                else:
+                    counts[word] = 1
+            return counts
+        else:
+            return ""
+            

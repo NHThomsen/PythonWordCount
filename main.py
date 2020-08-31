@@ -7,7 +7,8 @@ Proin in sapien sit amet nunc condimentum rhoncus. Phasellus mattis ac neque ut 
 Pellentesque vel accumsan nisi, commodo sodales nisl. Suspendisse blandit nibh sit amet ipsum tincidunt facilisis. Sed tempor sagittis orci, at auctor erat accumsan id. Donec hendrerit, leo sit amet placerat venenatis, est lorem ultricies tellus, a porttitor lectus dui eu dui. Praesent vulputate, orci nec ullamcorper venenatis, arcu enim sagittis tortor, mollis tempus dolor mi non libero. Suspendisse potenti. Suspendisse potenti. Pellentesque a dignissim diam. Pellentesque auctor nibh leo, sit amet sagittis magna varius vel. Maecenas a sodales tellus. Curabitur convallis leo ac massa pretium, non porta purus condimentum.
 In hac habitasse platea dictumst. Morbi feugiat pulvinar mi sed varius. Donec ut magna sapien. Ut tincidunt gravida lacus, vitae blandit elit consequat sit amet. Aenean lacinia pellentesque."""
 counter = wordCounter.wordCounter()
-counter.wordsToRemove({})
+counter.wordsToRemove({"sit","amet"})
+#counted = sorted(counter.wordCountPreProcessing(lyric).items(), key=lambda x: x[1], reverse=True)
 #counted = sorted(counter.wordCountDuringProcessing(lyric).items(), key=lambda x: x[1], reverse=True)
 counted = sorted(counter.wordCountPostProcessing(lyric).items(), key=lambda x: x[1], reverse=True)
 
