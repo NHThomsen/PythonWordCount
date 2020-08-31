@@ -2,6 +2,7 @@ class wordCounter():
     wordsToRemoveSet = {}
     def wordsToRemove(self, removeWords):
         self.wordsToRemoveSet = removeWords
+    # Removes words during counting
     def wordCountDuringProcessing(self, textToCount = ""):
         if textToCount != "":
             counts = dict()
@@ -15,6 +16,7 @@ class wordCounter():
             return counts
         else:
             return ""
+    # Removes words post counting
     def wordCountPostProcessing(self, textToCount = ""):
         if textToCount != "":
             counts = dict()
@@ -31,6 +33,7 @@ class wordCounter():
             return counts
         else:
             return ""
+    # Removes words pre counting
     def wordCountPreProcessing(self, textToCount = ""):
         if textToCount != "":
             counts = dict()
