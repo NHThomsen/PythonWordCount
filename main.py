@@ -1,4 +1,7 @@
 import wordCounter
+import time
+
+secondsBefore = time.time()
 
 inputText = """
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia lacus odio, sed sodales nibh euismod sed. In vulputate massa quis risus porttitor, at mattis magna ornare. Vivamus vel lectus et lectus efficitur ullamcorper. Suspendisse tristique orci lacus, sit amet laoreet lorem consequat vitae. Maecenas sed justo scelerisque ipsum sodales egestas non vel est. Proin placerat, dolor a auctor scelerisque, diam ante auctor ante, ut vehicula purus leo eget nunc. Maecenas imperdiet augue faucibus dolor scelerisque, in efficitur turpis dictum. In tortor nisi, auctor vitae egestas eget, finibus at nisi. Integer placerat, mauris eu auctor ornare, magna magna pulvinar diam, id varius lectus libero quis dolor. Proin mollis sapien laoreet, efficitur nisi nec, efficitur dui. Ut ornare auctor nunc, vel rhoncus libero vestibulum eget. Nulla luctus orci sed bibendum fringilla. Phasellus tempor tortor ex, a interdum lectus molestie a.
@@ -12,5 +15,7 @@ counted = sorted(counter.wordCountPreProcessing(inputText).items(), key=lambda x
 #counted = sorted(counter.wordCountDuringProcessing(inputText).items(), key=lambda x: x[1], reverse=True)
 #counted = sorted(counter.wordCountPostProcessing(inputText).items(), key=lambda x: x[1], reverse=True)
 
-for i in counted:
-    print(i[0], i[1])
+print(time.time() - secondsBefore)
+
+#for i in counted:
+    #print(i[0], i[1])
